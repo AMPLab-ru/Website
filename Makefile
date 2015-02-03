@@ -13,7 +13,11 @@ all: $(TARGETS)
 $(TARGETS): ./html/%.html: source/%.ascii
 	$(ASCII) $(ASCII_ARGS) --out-file=$@ $<
 
+update:
+	git pull
+	make
+
 clean:
 	rm html/*.html
 
-.PHONY: all
+.PHONY: all clean update
