@@ -27,6 +27,7 @@ print_article_files() {
 
 	for item in $(ls $1/ | grep -v ".README$"); do
 		echo "link:$thesesdir/$base/$item[$item]"
+		echo "+ "
 	done
 
 	echo ""
