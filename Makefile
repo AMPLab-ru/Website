@@ -19,6 +19,7 @@ $(TARGETS): ./html/%.html: source/%.ascii
 
 update:
 	git pull
+	make clean
 	make
 
 clean:
