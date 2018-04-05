@@ -18,9 +18,9 @@ $(TARGETS): ./html/%.html: source/%.ascii
 	$(ASCII) $(ASCII_ARGS) --out-file=$@ $<
 
 update:
-	git pull
-	make clean
-	make
+	git pull | grep 'Already up-to-date.';		\
+	test $$? -ne 0 && ( make clean; make );		\
+	true
 
 clean:
 	rm html/*.html source/theses.ascii
