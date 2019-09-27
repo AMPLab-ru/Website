@@ -5,7 +5,7 @@ ASCII_CONF=./layout1.conf
 ASCII_ARGS=--unsafe --backend=xhtml11 --conf-file=$(ASCII_CONF)
 
 PAGES=articles.ascii contacts.ascii \
-	index.ascii links.ascii projects.ascii theses.ascii
+	index.ascii links.ascii projects.ascii theses.ascii books.ascii
 
 TARGETS=$(PAGES:%.ascii=html/%.html)
 
